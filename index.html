@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/52bc416903.js" crossorigin="anonymous"></script>
+    <title>Useful Tools</title>
+</head>
+<body>
+    
+    <div class="container">
+            <h1 class="greeting">Hello!</h1>
+    </div>
+
+    <div class="login-register">
+         <button id="login">Login</button>
+         <button id="signup">Sign Up</button>
+         
+     </div>
+
+     <p class="text">Please Login or Sign Up to use our tools!</p>
+
+     <p class="dots"><span>.</span><span>.</span><span>.</span><span>.</span></p>
+
+     <div id="popup">
+         <div class="popup-content">
+             <div class="popupclose"><span id="close">&times</span></div>
+            <div class="container-form">
+                <form id="form" class="form">
+                    <h2>Sign Up</h2>
+                    <div class="form-control">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Enter username">
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="Enter email">
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter password">
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label for="password2">Confirm Password</label>
+                        <input type="password" id="password2" placeholder="Enter password again">
+                        <small>Error message</small>
+                    </div>
+                    <button id="submit">Submit</button>
+                </form>
+            </div>
+         </div>
+        </div>
+
+        <div id="popup-success">
+         <div class="popup-content-success">
+            <div class="container-form">
+                <div class="container-success">
+                    <span id="icon"><i class="fas fa-user-circle"></i></span>
+                    <p class="success">Welcome <span id="usernameSpan"></span>.</p>
+                    <p class="success">You can now log in with your credentials.</p>
+                    <button id="goback">Back</button>
+                </div>
+            </div>
+         </div>
+     </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

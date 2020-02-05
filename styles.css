@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+:root {
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #242333;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    user-select: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.login-register button {
+    margin: 0 13px;
+    width: 125px;
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 25px;
+    text-align: center;
+    font-size: 17px;
+    background-color: #59e3a9;
+}
+
+.login-register button:hover {
+    cursor: pointer;
+    background-color: #24d88d;
+}
+
+.login-register button:focus {
+    outline: none;
+}
+
+h1.greeting {
+    font-size: 130px;
+    margin: 25px;
+}
+
+p.text {
+    margin-top: 35px;
+    margin-bottom: -80px;
+    padding: 5px 10px;
+    font-size: 19px;
+}
+
+/* Popup login and register */
+#popup {
+    background: rgba(0, 0, 0 , 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.popup-content {
+
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    top: -450px;
+    animation: drop 0.7s ease forwards;
+}
+
+#popup-success {
+    background: rgba(0, 0, 0 , 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content-success {
+
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    top: -450px;
+    animation: drop 0.7s ease forwards;
+}
+
+.popupclose {
+
+    float: right;
+    color: #777;
+    transform: scale(3.5);
+    padding: 5px 15px;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Popup drop animation */
+@keyframes drop {
+    0%{opacity: 0}
+    70%{ transform: translateY(450px)}
+    100%{ transform: translateY(450px); opacity: 1}
+}
+
+@keyframes goUp {
+    0% { opacity: 1}
+    70%{ transform: translateY(-450px)}
+    100%{ transform: translateY(-450px); opacity: 0}
+}
+
+/* Form styles */
+
+.container-form {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 0 20px;
+    color: #777;
+}
+
+.form {
+    padding: 30px 40px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+
+}
+
+.form-control label {
+    color: #777;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control.success input {
+    border-color: var(--success-color);
+}
+
+.form-control.error input {
+    border-color: var(--error-color);
+}
+
+.form-control small {
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form button {
+    cursor: pointer;
+    background-color: #3498db;
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Dots animation */
+
+@keyframes blink {
+
+    0% {
+      opacity: .5;
+    }
+
+    20% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: .2;
+    }
+}
+
+p.dots {
+    font-size: 150px;
+    color: #59e3a9;
+    margin: 0;
+}
+
+.dots span {
+
+    animation-name: blink;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    padding: 0 20px;
+
+}
+
+.dots span:nth-child(2) {
+
+    animation-delay: .2s;
+}
+
+.dots span:nth-child(3) {
+
+    animation-delay: .4s;
+}
+
+.dots span:nth-child(4) {
+
+    animation-delay: .6s;
+}
+
+/* Popup success */
+
+.container-success {
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-success span#icon {
+    color: #777;
+    font-size: 80px;
+}
+
+#usernameSpan {
+    color: #59e3a9;
+    margin: 0;
+}
+
+p.success {
+    padding-bottom: 5px;
+    margin-bottom: 0;
+    padding-top: 20px;
+    color: #777;
+    margin-top: 5px;
+    font-size: 25px;
+    text-align: center;
+}
+
+button#goback {
+
+    cursor: pointer;
+    background-color: #3498db;
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 40px;
+    width: 90%;
+}
+
+button#goback:hover {
+    background-color: #217bb8;
+}
